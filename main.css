@@ -22,12 +22,13 @@ body {
     width: 100%;
     background-color: #FDFDFF;
 
-    font-family: "Lato", sans-serif;
+    font-family: Dekko, cursive;
     transition: background-color .5s;
 } 
 
 h1 {
     text-align: center;
+    color: #3e1b01;
 }
 
 main {
@@ -41,6 +42,7 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .round {
@@ -52,11 +54,27 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.round:hover {
- background-color: #1f51e9;
+.round:hover, .round:focus {
+ background-color: #093edb;
  cursor: pointer;
+}
+
+@media screen and (max-width: 718px) {
+    .round {
+        width: 150px;
+        height: 150px; 
+    }
+}
+
+@media screen and (max-width: 569px) {
+    .round {
+        width: 100px;
+        height: 100px; 
+    }
 }
 
 #left {
@@ -94,23 +112,25 @@ img {
 }
 
 .btncenter {
+    margin-top: 40px;
 	display: flex;
     display: -webkit-flex;
     justify-content: center;
 }
 
 button {
-	background-color: #369d14;
+    background-color: #51514e;
+    border-radius: 10px;
     border: none;
-    padding: 15px 32px;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
 	margin: auto;    
 } 
 
-button:hover {
-    background-color: #3f8727;
+button:hover, button:focus {
+    background-color: #181818;
     cursor: pointer;
 }
