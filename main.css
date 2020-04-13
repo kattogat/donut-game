@@ -1,27 +1,62 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+* :focus {
+    outline: 0;
+}
+
+html {
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
 body {
+    height: 100%;
+    width: 100%;
+    background-color: #FDFDFF;
+
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
-}
+} 
 
 h1 {
     text-align: center;
 }
 
-/* ------- Runda boxar ------ */
+main {
+    margin-top: 40px;
+}
+
+/* ------- Round boxes ------ */
 
 .container {
     display: flex;
-    display: -webkit-flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.rund {
+.round {
     border-radius: 50%;
 	width: 200px;
 	height: 200px; 
-    background-color: #4169E1;
+    background-color: #527CF9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.round:hover {
+ background-color: #1f51e9;
+ cursor: pointer;
 }
 
 #left {
@@ -38,9 +73,9 @@ h1 {
 
 .kitten {
     display: none;
-	height: 100%;
+    width: 100%;
+    height: auto;
 	overflow: auto;
-    
 }
 
 img {
@@ -54,6 +89,10 @@ img {
 	text-align: center;
 }
 
+.round, button {
+    color: #FDFDFF;
+}
+
 .btncenter {
 	display: flex;
     display: -webkit-flex;
@@ -61,9 +100,8 @@ img {
 }
 
 button {
-	background-color: #69e141;
+	background-color: #369d14;
     border: none;
-    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -73,5 +111,6 @@ button {
 } 
 
 button:hover {
-	background-color: #3f8727;
+    background-color: #3f8727;
+    cursor: pointer;
 }
